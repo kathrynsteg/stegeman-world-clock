@@ -5,7 +5,7 @@ setInterval(function () {
   let seoulTimeElement = seoulElement.querySelector(".time");
   let seoulTime = moment().tz("Asia/Seoul");
 
-  seoulDateElement.innerHTML = seoulTime.format("MMMM Do, YYYY");
+  seoulDateElement.innerHTML = seoulTime.format("dddd, MMMM Do, YYYY");
   seoulTimeElement.innerHTML = seoulTime.format("h:mm:ss [<small>]A[</small>]");
 
   // tbilisi
@@ -14,7 +14,7 @@ setInterval(function () {
   let tbilisiTimeElement = tbilisiElement.querySelector(".time");
   let tbilisiTime = moment().tz("Asia/Tbilisi");
 
-  tbilisiDateElement.innerHTML = tbilisiTime.format("MMMM Do, YYYY");
+  tbilisiDateElement.innerHTML = tbilisiTime.format("dddd, MMMM Do, YYYY");
   tbilisiTimeElement.innerHTML = tbilisiTime.format(
     "h:mm:ss [<small>]A[</small>]"
   );
@@ -25,8 +25,27 @@ setInterval(function () {
   let quebecTimeElement = quebecElement.querySelector(".time");
   let quebecTime = moment().tz("Canada/Eastern");
 
-  quebecDateElement.innerHTML = quebecTime.format("MMMM Do, YYYY");
+  quebecDateElement.innerHTML = quebecTime.format("dddd, MMMM Do, YYYY");
   quebecTimeElement.innerHTML = quebecTime.format(
     "h:mm:ss [<small>]A[</small>]"
   );
 }, 1000);
+
+function updateCity(event) {
+  let cityTimeZone = event.target.value;
+  let cityName = cityTimeZone.split("/")[1];
+  let cityTime = moment().tz(cityTimeZone);
+  let citiesElement = document.querySelector("#cities");
+  citiesElement.innerHTML = `<div class="city">
+          <div>
+            <h2>${cityName}</h2>
+            <div class="date">${cityTime.format("dddd, MMMM Do, YYYY")}</div>
+          </div>
+          <div class="time">${cityTime.format(
+            "h:mm:ss"
+          )} <small>${cityTime.format("A")}</small></div>
+        </div>`;
+}
+
+let citiesSelectElement = document.querySelector("#city");
+citiesSelectElement.addEventListener("change", updateCity);
