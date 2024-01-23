@@ -1,18 +1,19 @@
 body {
-  background-color: #ff7f00;
+  background-color: #080858;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
   text-align: center;
   font-size: 42px;
-  font-family: "McLaren", sans-serif;
+  font-family: "Bungee", sans-serif;
   margin-top: 10px;
 }
 
 h2 {
   margin: 0 0 10px;
   font-size: 28px;
+  font-family: "Bungee", sans-serif;
 }
 
 select {
@@ -60,16 +61,16 @@ footer {
 .time {
   font-size: 48px;
   font-weight: bold;
-  font-family: "McLaren", sans-serif;
+  font-family: "Bungee", sans-serif;
 }
 
 .time small {
   font-size: 28px;
-  font-family: "McLaren", sans-serif;
+  font-family: "Bungee", sans-serif;
   vertical-align: middle;
 }
 
 a {
-  color: black;
+  color: #48c6fb;
   font-weight: bold;
 }
