@@ -1,16 +1,18 @@
 body {
   background-color: #ff7f00;
-  font-family: "McLaren", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
   text-align: center;
-  font-size: 38px;
+  font-size: 42px;
+  font-family: "McLaren", sans-serif;
+  margin-top: 10px;
 }
 
 h2 {
   margin: 0 0 10px;
-  font-size: 32px;
+  font-size: 28px;
 }
 
 select {
@@ -42,7 +44,7 @@ footer {
   margin: 1S0px 0;
   justify-content: space-between;
   padding: 30px 0;
-  border-bottom: 3px double #48c6fb;
+  border-bottom: 2px double black;
 }
 
 .city:last-child {
@@ -54,12 +56,14 @@ footer {
 }
 
 .time {
-  font-size: 52px;
+  font-size: 48px;
   font-weight: bold;
+  font-family: "McLaren", sans-serif;
 }
 
 .time small {
   font-size: 28px;
+  font-family: "McLaren", sans-serif;
   vertical-align: middle;
 }
 
